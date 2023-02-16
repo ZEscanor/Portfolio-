@@ -997,7 +997,8 @@ header.major > :last-child {
   border-bottom: solid 3px #f56a6a;
   display: inline-block;
   margin: 0 0 2em 0;
-  padding: 0 0.75em 0.5em 0; }
+  padding: 0 0.75em 0.5em 0; 
+color: crimson;}
 
 header.main > :last-child {
   margin: 0 0 1em 0; }
@@ -1669,6 +1670,9 @@ button,
       width: 100%; }
       .features article .content > :last-child {
         margin-bottom: 0; }
+        .features article .content h3{
+          color:crimson;
+        }
   @media screen and (max-width: 980px) {
     .features {
       margin: 0 0 2em 0;
