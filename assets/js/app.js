@@ -5,7 +5,9 @@ const inserver = new IntersectionObserver((entries)=>{
         if (entry.isIntersecting){
             entry.target.classList.add("reveal");
         }
-        
+        else{
+            entry.target.classList.remove("reveal");
+        }
 
     })
 })
