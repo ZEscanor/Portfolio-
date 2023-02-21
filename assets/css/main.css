@@ -995,6 +995,7 @@ header p {
 
 header.major > :last-child {
   border-bottom: solid 3px #f56a6a;
+  font-size: 20px;
   display: inline-block;
   margin: 0 0 2em 0;
   padding: 0 0.75em 0.5em 0; 
@@ -2213,14 +2214,15 @@ text-align: center;}
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #3d4449;
+  color: black;
   font-family: "Roboto Slab", serif;
   font-weight: 400;
   letter-spacing: 0.075em;
   list-style: none;
   margin-bottom: 0;
   padding: 0;
-  text-transform: uppercase; }
+  text-transform: uppercase; 
+  font-size: 20px;}
   #menu ul a, #menu ul span {
     border-bottom: 0;
     color: inherit;
@@ -2289,8 +2291,31 @@ text-align: center;}
 
 .hidden {
   opacity: 0;
-  transition: 2s;
+  filter: blur(6px);
+  transform: translateX(-100%);
+  transition: all 1s;
 }
 .reveal {
   opacity: 1;
+  filter: blur(0);
+  transform: translateX(0)
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 
+    0 0 30px #e60073, 0 0 40px #e60073, 
+    0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073 ;
+  }
+  to {
+    text-shadow: 0 0 20px purple, 0 0 40px blueviolet, 0 0 50px
+     blueviolet, 0 0 50px blue, 0 0 60px black, 
+     0 0 70px white, 0 0 80px black;
+  }
+}
+
+
+.glow {
+  color: #fff;
+  animation: glow 2s ease-in-out infinite alternate;
 }
